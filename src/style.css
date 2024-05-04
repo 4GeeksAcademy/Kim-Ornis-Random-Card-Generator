@@ -8,23 +8,40 @@ body {
   background: white;
   margin: auto;
   height: 400px;
+  font-size: 80px;
   width: 250px;
   padding: 20px;
-  paddingborder: 1px solid black;
+  padding-top: 180px;
   border-radius: 5px;
   position: relative;
   &:before {
-    content: "\2660";
     position: absolute;
     top: 20px;
     left: 20px;
     font-size: 80px;
   }
   &:after {
-    content: "\2660";
     position: absolute;
     bottom: 20px;
     right: 20px;
     font-size: 80px;
   }
+}
+&.spade:before,
+&.spade:after {
+  content: "\2660";
+}
+&.club:before,
+&.club:after {
+  content: "\2663";
+}
+&.heart:before,
+&.heart:after {
+  content: "\2665";
+  color: red;
+}
+&.diamond:before,
+&.diamond:after {
+  content: "\2666";
+  color: red;
 }
