@@ -3,15 +3,13 @@ body {
   background: grey;
 }
 .card {
+  flex-flow: row;
   text-align: center;
-  display: inline-block;
   background: white;
   margin: auto;
   height: 400px;
   font-size: 80px;
   width: 250px;
-  padding: 20px;
-  padding-top: 180px;
   border-radius: 5px;
   position: relative;
   &:before {
@@ -27,21 +25,25 @@ body {
     font-size: 80px;
   }
 }
-&.spade:before,
-&.spade:after {
-  content: "\2660";
+&.♠:before,
+&.♠:after {
+  content: "♠";
 }
-&.club:before,
-&.club:after {
-  content: "\2663";
+&.♦:before,
+&.♦:after {
+  content: "♦";
 }
-&.heart:before,
-&.heart:after {
-  content: "\2665";
+&.♥:before,
+&.♥:after {
+  content: "♥";
   color: red;
 }
-&.diamond:before,
-&.diamond:after {
-  content: "\2666";
+&.♣:before,
+&.♣:after {
+  content: "♣";
   color: red;
+}
+.bottom-suit {
+  transform: rotate(180deg);
+  display: inline-block;
 }
