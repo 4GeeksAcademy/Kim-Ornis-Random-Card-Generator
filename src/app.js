@@ -9,6 +9,9 @@ window.onload = () => {
   //write your code here
   document.querySelector(".number").innerHTML = generateRandomNumber();
   let suit = generateRandomSuit();
+  if (suit == "♥" || suit == "♦") {
+    document.querySelector(".container-Fluid").style.color = "red";
+  }
   document.querySelector(".top-suit").innerHTML = suit;
   document.querySelector(".bottom-suit").innerHTML = suit;
 };
@@ -27,7 +30,7 @@ let generateRandomNumber = () => {
     "10",
     "J",
     "Q",
-    "K"
+    "K",
   ];
   let indexNumbers = Math.floor(Math.random() * numbers.length);
   return numbers[indexNumbers];
